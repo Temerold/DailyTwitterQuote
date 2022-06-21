@@ -1,9 +1,4 @@
-import yaml
 import re
-
-with open("auth.yml", "r") as file:
-    yml_config = yaml.safe_load(file)["sus"]
-    print(yml_config)  # ! debug!!
 
 
 def delta_time_parser(txt):
