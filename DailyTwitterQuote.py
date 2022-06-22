@@ -10,12 +10,12 @@ def API(auth_file="auth.yml"):
     with open(auth_file, "r") as file:
         yml_config = yaml.safe_load(file)["twitter"]
 
-    consumer_key = yml_config["consumer_key"]
-    consumer_secret = yml_config["consumer_secret"]
+    api_key = yml_config["api_key"]
+    api_secret = yml_config["api_secret"]
     access_token = yml_config["access_token"]
     access_secret = yml_config["access_secret"]
 
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth = tweepy.OAuthHandler(api_key, api_secret)
     auth.set_access_token(access_token, access_secret)
 
     return tweepy.API(auth)
