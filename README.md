@@ -22,19 +22,19 @@
 6.  Create (preferably) a .txt file containing all the quotes you want to use. If you don't, it defaults to my [website's](https://temerold.se/) quote file (https://temerold.se/wp-content/themes/poseidon/quotes.txt), containing quotes about programming which are used on my website.
 7.  Create a Python 3.x file and import the [`DailyTwitterQuote.py`](DailyTwitterQuote.py) file using:
 
-       import DailyTwitterQuote
+        `import DailyTwitterQuote`
 
     (Example: [`example.py`](example.py))
 
-8.  In the file you made, you must use the `DailyTwitterQuote.API()` method to authorize the program to use your Twitter account. You just have to pass the authorization .yml file's path ([`auth.yml`](auth.yml)) as `auth_file`. This could look something like this:
+8.  In the file you made, you must use the `DailyTwitterQuote.API()` method to authorize the program to use your Twitter account. You only have to pass the authorization .yml file's path ([`auth.yml`](auth.yml)) as `auth_file`. This could look something like this:
 
-       api = DailyTwitterQuote.API(auth_file="auth.yml")
+        `api = DailyTwitterQuote.API(auth_file="auth.yml")`
 
 9.  Then, use the DailyTwitterQuote.tweet_random_quote() method, passing the `DailyTwitterQuote.API()` variable you made earlier as `api`, as well as the quote file you made earlier's path as `quote_file` -- but if nothing is passed, it defaults to "https://temerold.se/wp-content/themes/poseidon/quotes.txt". (Alternatively, you can pass a file's URL. But in this example, we're going to use a local file.) You may also pass `seperator` and `replacement` strings, with the first one replacing the second in tweet. Defaults to " —" and "\n—", respectively.
 
-        DailyTwitterQuote.tweet_random_quote(
+        `DailyTwitterQuote.tweet_random_quote(
             api=api, quote_file="quotes.txt", seperator=" —", replacement="\n—"
-        )
+        )`
 
 
 10. Finally, run the code, and you should now see a random quote tweeted by your Twitter account!
