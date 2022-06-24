@@ -7,7 +7,7 @@
 
 ## Set-up
 1.  Install Python 3.0 or higher -- although *preferably* the latest version.
-2.  Install the following packages with pip, or by running the [install_requirements.bat](install_requirements.bat) script:
+2.  Install the following packages with pip, or by running the [`install_requirements.bat`](install_requirements.bat) script:
 
     | Package | Version |
     |---------|---------|
