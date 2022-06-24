@@ -19,7 +19,7 @@
 3.  Register a Twitter acount at https://twitter.com and apply for a Twitter developer account at https://developer.twitter.com/apply-for-access.
 4.  Create a Twitter API project and then an app, in the same project, at https://developer.twitter.com/portal/dashboard.
 5.  Now, obtain your API key, API secret, access token, and access secret, by going to the app's "Keys and tokens" tab ([https://developer.twitter.com/portal/projects/<project_id>/apps/<app_id>/keys](https://developer.twitter.com/portal/projects/<project_id>/apps/<app_id>/keys)). Insert them into the [`auth.yml`](auth.yml) file.
-6.  Create (preferably) a .txt file containing all the quotes you want to use. If you leave it empty, it defaults to my [website's](https://temerold.se/) quote file (https://temerold.se/wp-content/themes/poseidon/quotes.txt).
+6.  Create (preferably) a .txt file containing all the quotes you want to use. If you don't, it defaults to my [website's](https://temerold.se/) quote file (https://temerold.se/wp-content/themes/poseidon/quotes.txt).
 7.  Create a Python 3.x file and import the [`DailyTwitterQuote.py`](DailyTwitterQuote.py) file using:
 
        import DailyTwitterQuote
