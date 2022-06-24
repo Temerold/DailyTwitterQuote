@@ -32,6 +32,7 @@ def tweet_random_quote(
         URLValidator(quote_file)
         quote_file = urllib.request.urlopen(quote_file)
         quotes = [line.decode("utf-8") for line in quote_file]
+
     except ValueError:
         with open(quote_file, "r") as file:
             quotes = file.readlines()
