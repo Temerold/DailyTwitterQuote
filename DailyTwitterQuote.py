@@ -23,20 +23,19 @@ def API(auth_file="auth.yml"):
 
 def tweet_random_quote(
     api,
-    separator="—",
+    separator=" —",
+    replacement="\n—",
     # Programming quotes used on my website (https://temerold.se/)
-    file="https://temerold.se/wp-content/themes/poseidon/quotes.txt",
+    quote_file="https://temerold.se/wp-content/themes/poseidon/quotes.txt",
 ):
     try:
-        URLValidator(file)
-    except ValidationError:
-        with open(file, "r") as file:
+        URLValidator(quote_file)
+        quote_file = urllib.request.urlopen(quote_file)
+        quotes = [line.decode("utf-8") for line in quote_file]
+    except ValueError:
+        with open(quote_file, "r") as file:
             quotes = file.readlines()
 
-    else:
-        file = urllib.request.urlopen(file)
-        quotes = [line.decode("utf-8") for line in file]
-
     quote = random.choice(quotes)
-    quote = quote.replace(separator, f"\n{separator}")
+    quote = quote.replace(separator, replacement)
     api.update_status(quote)
