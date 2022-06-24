@@ -24,7 +24,7 @@
 
        import DailyTwitterQuote
 
-   (Example: [`example.py`](example.py))
+    (Example: [`example.py`](example.py))
 
 8.  In the file you made, you must use the `DailyTwitterQuote.API()` method to authorize the program to use your Twitter account. You just have to pass the authorization .yml file's path ([`auth.yml`](auth.yml)) as `auth_file`. This could look something like this:
 
