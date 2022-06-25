@@ -33,7 +33,7 @@
 9.  Then, use the `DailyTwitterQuote.tweet_random_quote()` method, passing the `DailyTwitterQuote.API()` variable you made earlier as `api`, as well as the quote file you made earlier's path as `quote_file` -- but if nothing is passed, it defaults to "https://temerold.se/wp-content/themes/poseidon/quotes.txt". (Alternatively, you can pass a file's URL. But in this example, we're going to use a local file.) You may also pass `separator` and `replacement` strings, with the second one replacing the first in the tweet. Defaults to " —" and "\n—", respectively.
 
         DailyTwitterQuote.tweet_random_quote(
-            api=api, quote_file="quotes.txt", separator=" —", replacement="\n—"
+            api=api, quote_file="example_quotes.txt", separator=" —", replacement="\n—"
         )
 
 
