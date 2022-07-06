@@ -11,7 +11,7 @@
 
     | Package | Version |
     |---------|---------|
-    | Django  | 4.0.5   |
+    | Django  | 4.0.6   |
     | pipreqs | 0.4.11  |
     | PyYAML  | 6.0     |
     | tweepy  | 4.10.0  |
